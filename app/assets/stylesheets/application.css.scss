@@ -16,7 +16,7 @@
 
  @import 'normalize';
  @import "font-awesome";
- 
+
  $white: #FFFFFF;
  $dark: #424652;
  $grey: #EFEFF0;
@@ -47,7 +47,6 @@
     top: 0;
     width: 100%;
     z-index: 999;
-    //background: rgba(135, 216, 211, 0.85);
     background: rgba(18, 168, 101, 0.75);
     .alert, .notice {
         padding: 2.5rem 0;
