@@ -7,4 +7,11 @@
       There are <%= forum_thread.forum_posts.count %> posts under it.</p>
   </div>
 <% end %>
+
+<% if @forum_threads.empty?  %>
+  <div class="thread">
+    <h2 class="title">It looks like there are no posts!</h2>
+    <p class="date">You can start one <%= link_to "here", new_forum_thread_path %></p>
+  </div>
+<% end %>
 </div>
