@@ -20,6 +20,7 @@
  $white: #FFFFFF;
  $dark: #424652;
  $grey: #EFEFF0;
+ $primary: #138787;
  * {
    box-sizing: border-box;
  }
@@ -29,8 +30,7 @@
  }
 
  .container {
-   width: 60%;
-   max-width: 1140px;
+   padding: 0 4.5%;
    margin: 0 auto;
  }
 
@@ -38,7 +38,6 @@
 	content: " ";
 	display: table;
 }
-
 .clearfix:after {
 	clear: both;
 }
@@ -98,12 +97,14 @@
 #forum_thread_index {
   padding: 2em 5%;
   border-radius: 0.5em;
-  border: 1px solid $dark;
   .thread {
-    background: $grey;
-    margin: 1em 0;
-    padding: 1em 0;
-    border-bottom: 1px solid $dark;
+    background: $white;
+    margin: 1.25rem 0;
+    padding: 0.5em 0;
+    padding-left: 10px;
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 5px #CACACB;
+    //border: 1px solid #CACACB;
     .title {
       margin: 0;
       a {
@@ -117,6 +118,18 @@
       margin-top: 0.25rem;
       font-size: 0.9rem;
       color: #B2BAC2;
+    }
+  }
+  .button {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.2em;
+    background: $primary;
+    color: $white;
+    padding: .3em .3em;
+    &:hover {
+      color: $grey;
     }
   }
 }

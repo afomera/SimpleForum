@@ -1,9 +1,10 @@
 <div id="forum_thread_index">
-  <%= link_to "New Post", new_forum_thread_path %> <br>
+  <%= link_to "New Post", new_forum_thread_path, class: "button" %> <br>
 <% @forum_threads.each do |forum_thread| %>
   <div class="thread">
-    <h2 class="title"><%= forum_thread.id %> | <%= link_to forum_thread.subject, forum_thread_path(forum_thread) %></h2>
-    <p class="date">Published <%= time_ago_in_words(forum_thread.created_at) %> ago  by <%= forum_thread.user.username %>. There are <%= forum_thread.forum_posts.count %> posts under it.</p>
+    <h2 class="title"><%= link_to forum_thread.subject, forum_thread_path(forum_thread) %></h2>
+    <p class="date">Published <%= time_ago_in_words(forum_thread.created_at) %> ago  by <%= forum_thread.user.username %>.
+      There are <%= forum_thread.forum_posts.count %> posts under it.</p>
   </div>
 <% end %>
 </div>
