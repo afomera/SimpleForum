@@ -9,9 +9,15 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
+  <% flash.each do |key, value| %>
+    <div id="notice_wrapper">
+      <div class="<%= key %>">
+        <i class="fa fa-times-circle fa-4 alert_close"></i>
+        <%= value %>
+      </div>
+    </div>
+  <% end %>
+  
 <%= yield %>
 
 </body>
