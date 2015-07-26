@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :forum_threads do
     resources :forum_posts, module: :forum_threads
   end
-  
-  root 'pages#home'
+
+  root 'forum_threads#index'
   get 'pages/home'
 
   # The priority is based upon order of creation: first created -> highest priority.

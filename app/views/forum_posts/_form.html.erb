@@ -1,0 +1,5 @@
+<%= form_for [@forum_thread, @forum_post] do |f| %>
+  <%= f.text_area :body, placeholder: "Add your comment!", rows: "10" %>
+  <br>
+  <%= f.submit %>
+<% end %>

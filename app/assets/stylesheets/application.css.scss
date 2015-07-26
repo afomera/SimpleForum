@@ -95,6 +95,28 @@
    }
 }
 
-#thread_content {
-  background: $white;
+#forum_thread_index {
+  padding: 2em 5%;
+  border-radius: 0.5em;
+  border: 1px solid $dark;
+  .thread {
+    background: $grey;
+    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid $dark;
+    .title {
+      margin: 0;
+      a {
+        color: #397CAC;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+    }
+    .date {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: #B2BAC2;
+    }
+  }
 }

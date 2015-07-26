@@ -1,0 +1,4 @@
+<%= div_for forum_post do %>
+  <p class="author">Posted by <%= forum_post.user.username %> on <%= forum_post.created_at %></p>
+  <p><%= forum_post.body %></p>
+<% end %>

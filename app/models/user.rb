@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, :uniqueness => { :case_sensitive => false }
 
   has_many :forum_threads
+  has_many :forum_posts
 
   # This will allow us to login with username or password
   attr_accessor :login

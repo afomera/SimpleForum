@@ -1,0 +1,7 @@
+<%= @forum_thread.subject %>
+<br>
+<%= @forum_thread.user.username %>
+<hr/>
+<%= render @forum_thread.forum_posts %>
+<hr />
+<%= render partial: "forum_posts/form" %>

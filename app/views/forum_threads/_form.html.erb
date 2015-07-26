@@ -1,0 +1,10 @@
+<%= form_for @forum_thread do |f| %>
+  <%= f.text_field :subject, placeholder: "Subject" %>
+  <br><br>
+  <%= f.fields_for :forum_posts do |p| %>
+    <%= p.text_area :body, placeholder: "Your Message", rows: "10" %>
+  <% end %>
+
+  <br><br>
+  <%= f.submit %>
+<% end %>
