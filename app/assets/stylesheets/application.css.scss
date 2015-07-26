@@ -14,6 +14,59 @@
  *= require_self
  */
 
+ @import 'normalize';
+
+ $white: #FFFFFF;
+ $dark: #424652;
+ $grey: #EFEFF0;
+ * {
+   box-sizing: border-box;
+ }
  body {
    font-family: 'Raleway', sans-serif;
+   background: $grey;
  }
+
+ .container {
+   width: 60%;
+   max-width: 1140px;
+   margin: 0 auto;
+ }
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.main_header {
+   width: 100%;
+   margin: 0 auto;
+   background: $white;
+   #brand {
+     float: left;
+     padding: 0.75rem 0.75rem;
+     a {
+       text-transform: capitalize;
+       font-weight: 700;
+       font-size: 1.6rem;
+       text-decoration: none;
+       color: $dark;
+     }
+   }
+   #nav {
+     float: right;
+     a {
+       line-height: 60px;
+       background: #397CAC;
+       padding: .5em 0.75em;
+       border-radius: 0.2em;
+       color: $white;
+       text-decoration: none;
+       font-weight: 400;
+     }
+   }
+}
