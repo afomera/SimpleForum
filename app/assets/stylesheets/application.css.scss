@@ -15,7 +15,8 @@
  */
 
  @import 'normalize';
-
+ @import "font-awesome";
+ 
  $white: #FFFFFF;
  $dark: #424652;
  $grey: #EFEFF0;
@@ -41,6 +42,30 @@
 .clearfix:after {
 	clear: both;
 }
+#notice_wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    //background: rgba(135, 216, 211, 0.85);
+    background: rgba(18, 168, 101, 0.75);
+    .alert, .notice {
+        padding: 2.5rem 0;
+        text-align: center;
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $white;
+        letter-spacing: 1px;
+    }
+    .alert_close {
+      float: right;
+      padding-right: 4rem;
+      font-size: 1.35rem;
+      color: $white;
+      text-decoration: none;
+    }
+}
 
 .main_header {
    width: 100%;
@@ -61,12 +86,16 @@
      float: right;
      a {
        line-height: 60px;
-       background: #397CAC;
        padding: .5em 0.75em;
        border-radius: 0.2em;
+       background: #397CAC;
        color: $white;
        text-decoration: none;
        font-weight: 400;
      }
    }
+}
+
+#thread_content {
+  background: $white;
 }

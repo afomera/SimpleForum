@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//Notifications fade out after 4.5 seconds or until you click the X icon to dismiss
+$(document).ready(function() {
+    setTimeout(function() {
+        $("#notice_wrapper").fadeOut("slow", function() {
+            $(this).remove();
+        })
+    }, 4500 );
+    $(".alert_close").click(function(e) {
+      e.preventDefault();
+      $("#notice_wrapper").remove();
+    })
+});
